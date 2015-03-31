@@ -1,4 +1,5 @@
 FROM ubuntu:14.04
+RUN apt-get install -y python
+ADD t123.py .
 EXPOSE 80
-ENTRYPOINT ["/bin/bash"]
-CMD ["echo hello-world"]
+CMD ["python" ,"t123.py"]
